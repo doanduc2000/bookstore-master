@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { landingRoute } from '../../utils/routes';
 import logo from '../../assets/logo.webp';
@@ -8,6 +8,11 @@ import './header.css';
 
 const Header = () => {
   const location = useLocation();
+  const [dropdown, setDropdown] = useState(false);
+  const openDropdown = (e) => {
+    setDropdown(!dropdown);
+    e.preventDefault();
+  };
   const activeRoute = (routeName) => {
     return location.pathname.includes(routeName);
   };
@@ -25,7 +30,15 @@ const Header = () => {
                 <span className='header__phonenumber'>094.1234.828</span>
               </div>
               <div className='header__user'>
-                <img src={userIcon} alt='' className='w-8 h-8' />
+                <button onClick={openDropdown}>
+                  <img src={userIcon} alt='' className='w-8 h-8' />
+                </button>
+                {dropdown && (
+                  <ul className='header__dropdown'>
+                    <li className='header__dropdown-item login'>Đăng nhập</li>
+                    <li className='header__dropdown-item'>Đăng ký</li>
+                  </ul>
+                )}
               </div>
             </div>
           </div>

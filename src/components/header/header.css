@@ -23,9 +23,11 @@
   font-size: 18px;
   font-weight: 500;
   color: #03a9f4;
+  cursor: pointer;
   float: right;
 }
 .header__user {
+  position: relative;
   margin-left: 30px;
   cursor: pointer;
 }
@@ -53,4 +55,23 @@
 }
 .item--active {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.header__dropdown {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  margin-top: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 2px 1px 3px rgb(0 0 0 / 20%);
+}
+.header__dropdown-item {
+  padding: 10px;
+}
+
+.header__dropdown > .login {
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
 }
