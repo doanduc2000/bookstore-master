@@ -1,0 +1,56 @@
+.header__container {
+  padding: 15px 0;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo > img {
+  width: 200px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header__time {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin: 0;
+}
+.header__phonenumber {
+  font-size: 18px;
+  font-weight: 500;
+  color: #03a9f4;
+  float: right;
+}
+.header__user {
+  margin-left: 30px;
+  cursor: pointer;
+}
+.header__user > img {
+  width: 25px;
+  height: 25px;
+}
+.header__menu {
+  background-color: #03a9f4;
+}
+.header__menu-container {
+  display: flex;
+  align-items: center;
+}
+.header__item {
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.header__item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.item--active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
