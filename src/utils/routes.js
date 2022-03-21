@@ -1,5 +1,7 @@
 import Landing from '../pages/landing';
 import Info from '../pages/info';
+import Login from '../pages/auth/login';
+import Register from '../pages/auth/register';
 export const landingRoute = [
   {
     name: 'Trang chủ',
@@ -18,5 +20,21 @@ export const landingRoute = [
     path: '/product',
     exact: true,
     component: 'Product',
+  },
+];
+export const authRoute = [
+  {
+    name: 'Đăng nhập',
+    layout: '/auth',
+    path: '/login',
+    exact: true,
+    component: <Login />,
+  },
+  {
+    name: 'Đăng ký',
+    layout: '/auth',
+    path: '/register',
+    exact: true,
+    component: <Register />,
   },
 ];

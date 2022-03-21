@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import { landingRoute } from '../../utils/routes';
 import logo from '../../assets/logo.webp';
 import userIcon from '../../assets/icons/user.svg';
@@ -7,6 +7,7 @@ import userIcon from '../../assets/icons/user.svg';
 import './header.css';
 
 const Header = () => {
+  const history = useHistory();
   const location = useLocation();
   const [dropdown, setDropdown] = useState(false);
   const openDropdown = (e) => {
@@ -35,8 +36,26 @@ const Header = () => {
                 </button>
                 {dropdown && (
                   <ul className='header__dropdown'>
-                    <li className='header__dropdown-item login'>Đăng nhập</li>
-                    <li className='header__dropdown-item'>Đăng ký</li>
+                    <li
+                      className='header__dropdown-item login'
+                      onClick={(e) => {
+                        history.push('/auth/login');
+                        setDropdown(false);
+                        e.preventDefault();
+                      }}
+                    >
+                      Đăng nhập
+                    </li>
+                    <li
+                      className='header__dropdown-item'
+                      onClick={(e) => {
+                        history.push('/auth/register');
+                        setDropdown(false);
+                        e.preventDefault();
+                      }}
+                    >
+                      Đăng ký
+                    </li>
                   </ul>
                 )}
               </div>
