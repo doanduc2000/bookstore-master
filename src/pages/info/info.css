@@ -1,0 +1,38 @@
+.info {
+  padding: 40px 0;
+  background-color: #fff;
+}
+.info__title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.info__text > p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.info__branch-title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.info__branch-item {
+  margin-bottom: 10px;
+}
+.info__branch-address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.info__branch-address > img {
+    margin-right: 5px;
+  }
+.info__branch-hotline {
+  display: flex;
+  align-items: center;
+}
+.info__branch-hotline > img {
+  margin-right: 5px;
+}
