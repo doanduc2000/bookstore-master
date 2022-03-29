@@ -1,5 +1,6 @@
 import Landing from '../pages/landing';
 import Info from '../pages/info';
+import Product from '../pages/product';
 import Login from '../pages/auth/login';
 import Register from '../pages/auth/register';
 export const landingRoute = [
@@ -19,7 +20,7 @@ export const landingRoute = [
     name: 'Sản phẩm',
     path: '/product',
     exact: true,
-    component: 'Product',
+    component: <Product />,
   },
 ];
 export const authRoute = [
