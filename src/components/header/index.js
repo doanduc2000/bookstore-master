@@ -68,6 +68,7 @@ const Header = () => {
           <ul className='header__menu-container'>
             {landingRoute.map((item, idx) => {
               const isActiveRoute = activeRoute(item.path) ? ' item--active' : '';
+              if(item.exact)
               return (
                 <Link key={item.path} to={item.path}>
                   <li className={'header__item' + isActiveRoute}>{item.name}</li>

@@ -1,0 +1,26 @@
+.commentItem {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: justify;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.commentItem__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.commentItem__user {
+  font-size: 14px;
+  font-weight: 600;
+  color: #03a9f4;
+}
+.commentItem__time {
+  font-size: 12px;
+  font-weight: 500;
+}
+.commentItem__text {
+  font-size: 13px;
+}
