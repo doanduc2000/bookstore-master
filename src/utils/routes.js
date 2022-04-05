@@ -2,6 +2,7 @@ import Landing from '../pages/landing';
 import Info from '../pages/info';
 import Product from '../pages/product';
 import DetailProduct from '../pages/detailProduct';
+import Checkout from '../pages/checkout';
 import Login from '../pages/auth/login';
 import Register from '../pages/auth/register';
 export const landingRoute = [
@@ -29,6 +30,12 @@ export const landingRoute = [
     exact: false,
     component: <DetailProduct />,
   },
+  {
+    name: 'Thanh toán',
+    path: '/checkout',
+    exact: false,
+    component: <Checkout />,
+  },
 ];
 export const authRoute = [
   {
@@ -45,4 +52,5 @@ export const authRoute = [
     exact: true,
     component: <Register />,
   },
+  {}
 ];

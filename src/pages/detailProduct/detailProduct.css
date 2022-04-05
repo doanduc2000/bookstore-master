@@ -87,6 +87,7 @@
   padding: 0 2px;
   text-align: center;
   background: #fff;
+  -moz-appearance: textfield;
 }
 .detailProduct__input::-webkit-outer-spin-button,
 .detailProduct__input::-webkit-inner-spin-button {
