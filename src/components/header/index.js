@@ -3,6 +3,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import { landingRoute } from '../../utils/routes';
 import logo from '../../assets/logo.webp';
 import userIcon from '../../assets/icons/user.svg';
+import cartIcon from '../../assets/icons/cart.svg';
 
 import './header.css';
 
@@ -30,6 +31,9 @@ const Header = () => {
                 <span className='header__time'>Giờ mở cửa (08:00 - 22:00)</span>
                 <span className='header__phonenumber'>094.1234.828</span>
               </div>
+              <Link to='/cart'>
+                <img src={cartIcon} alt='' className='w-8 h-8' />
+              </Link>
               <div className='header__user'>
                 <button onClick={openDropdown}>
                   <img src={userIcon} alt='' className='w-8 h-8' />
@@ -68,12 +72,12 @@ const Header = () => {
           <ul className='header__menu-container'>
             {landingRoute.map((item, idx) => {
               const isActiveRoute = activeRoute(item.path) ? ' item--active' : '';
-              if(item.exact)
-              return (
-                <Link key={item.path} to={item.path}>
-                  <li className={'header__item' + isActiveRoute}>{item.name}</li>
-                </Link>
-              );
+              if (item.exact)
+                return (
+                  <Link key={item.path} to={item.path}>
+                    <li className={'header__item' + isActiveRoute}>{item.name}</li>
+                  </Link>
+                );
             })}
           </ul>
         </div>

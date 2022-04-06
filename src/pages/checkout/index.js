@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CheckoutItem from '../../components/checkoutItem';
+import { checkoutData } from '../../mockData/product';
 import './checkout.css';
 
 const Checkout = () => {
+  let provisional = 0;
+  let transportFee = 20;
   return (
     <div className='checkout'>
       <div className='container'>
@@ -25,21 +29,26 @@ const Checkout = () => {
               <h3>Đơn hàng (3 sản phẩm)</h3>
             </div>
             <div className='checkout__right-content'>
-              <div className='checkout__product'></div>
+              <div className='checkout__product'>
+                {checkoutData.map((item, idx) => {
+                  provisional += item.cost * item.total;
+                  return <CheckoutItem key={idx} {...item} />;
+                })}
+              </div>
               <div className='checkout__price'>
                 <div className='checkout__cost'>
                   <span>Tạm tính</span>
-                  <span>100.000đ</span>
+                  <span>{provisional}đ</span>
                 </div>
                 <div className='checkout__cost'>
                   <span>Phí vận chuyển</span>
-                  <span>100.000đ</span>
+                  <span>{transportFee}đ</span>
                 </div>
               </div>
               <div className='checkout__total'>
                 <div className='checkout__cost'>
                   <span className='checkout__total-title'>Tổng cộng</span>
-                  <span className='checkout__total-desc'>100.000đ</span>
+                  <span className='checkout__total-desc'>{provisional + transportFee}đ</span>
                 </div>
                 <div className='checkout__action'>
                   <span> {'<'} Quay về giỏ hàng</span>

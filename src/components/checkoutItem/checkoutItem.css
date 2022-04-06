@@ -1,0 +1,23 @@
+.checkoutItem__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkoutItem__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkoutItem__info > img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.checkoutItem__name {
+  margin: 0 40px 0 10px;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

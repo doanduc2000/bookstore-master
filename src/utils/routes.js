@@ -3,6 +3,7 @@ import Info from '../pages/info';
 import Product from '../pages/product';
 import DetailProduct from '../pages/detailProduct';
 import Checkout from '../pages/checkout';
+import Cart from '../pages/cart';
 import Login from '../pages/auth/login';
 import Register from '../pages/auth/register';
 export const landingRoute = [
@@ -36,6 +37,12 @@ export const landingRoute = [
     exact: false,
     component: <Checkout />,
   },
+  {
+    name: 'Giỏ hàng',
+    path: '/cart',
+    exact: false,
+    component: <Cart />,
+  },
 ];
 export const authRoute = [
   {
@@ -52,5 +59,5 @@ export const authRoute = [
     exact: true,
     component: <Register />,
   },
-  {}
+  {},
 ];
