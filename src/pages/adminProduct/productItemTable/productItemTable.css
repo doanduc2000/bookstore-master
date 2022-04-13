@@ -1,0 +1,53 @@
+.acc {
+  border: 1px solid #03a9f4;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.acc__header {
+  @apply flex justify-between items-center;
+  padding: 10px 20px 10px 10px;
+  border-bottom: 1px solid #03a9f4;
+}
+.acc__title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.acc__btnGroup {
+  @apply flex items-center;
+  gap: 10px;
+}
+.acc__body {
+  padding: 10px 10px 20px 10px;
+  display: flex;
+}
+.acc_left {
+  width: 20%;
+  margin-right: 20px;
+}
+.acc_left > img {
+  display: block;
+  width: 100%;
+}
+.acc_right {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+}
+.inputForm > label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.inputForm > input {
+  outline: none;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 8px;
+}

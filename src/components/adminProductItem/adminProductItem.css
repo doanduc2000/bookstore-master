@@ -1,0 +1,21 @@
+.adminProductItem img {
+  margin: 0 auto;
+  height: 212px;
+}
+.adminProduct__text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.adminProductItem__name {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.adminProductItem__cost {
+  display: block;
+}

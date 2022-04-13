@@ -4,12 +4,37 @@
   font-weight: 600;
   margin-bottom: 20px;
 }
+.dashboard__overview {
+  margin-bottom: 20px;
+}
 .dashboard__card-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 18px;
   margin-bottom: 5px;
   font-weight: 600;
 }
+.dashboard__card-title label {
+  font-size: 14px;
+  color: #03a9f4;
+}
+.dashboard__card-title label:hover {
+  color: #0346f4;
+}
 .dashboard__card {
   display: flex;
   gap: 20px;
+}
+.dashboard__bestProduct {
+  width: fit-content;
+
+  margin-bottom: 20px;
+}
+.dashboard__bestProduct-box {
+  display: flex;
+  overflow-x: auto;
+}
+.dashboard__bestProduct-box > .adminProductItem {
+  max-width: 170px;
+  margin: 0 20px;
 }

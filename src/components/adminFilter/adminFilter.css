@@ -1,0 +1,30 @@
+.adminFilter {
+  position: relative;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #03a9f4;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.adminFilter > span {
+  margin-right: 10px;
+}
+.adminFilter__menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #03a9f4;
+  border-radius: 8px;
+  top: 35px;
+  left: 0;
+  width: 100%;
+}
+.adminFilter__item {
+  padding: 5px;
+}
+.adminFilter__item:nth-child(1) {
+  border-bottom: 1px solid #03a9f4;
+}

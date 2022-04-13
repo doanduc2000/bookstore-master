@@ -1,5 +1,6 @@
 import React from 'react';
 import upArrow from '../../assets/icons/upArrow.svg';
+import { formatNumber } from '../../utils/help';
 import './adminCard.css';
 
 const AdminCard = (props) => {
@@ -8,7 +9,7 @@ const AdminCard = (props) => {
       <div className='adminCard__main'>
         <div className='adminCard__text'>
           <span className='adminCard__title'>{props.name}: </span>
-          <span className='adminCard__desc'>{props.money} VND</span>
+          <span className='adminCard__desc'>{formatNumber(props.money)} VND</span>
         </div>
         <div className='adminCard__icon'>
           <img src={upArrow} />

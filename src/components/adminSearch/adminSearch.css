@@ -1,0 +1,17 @@
+.adminSearch {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #03a9f4;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.adminSearch > input {
+  outline: none;
+  margin-right: 10px;
+}
+.adminSearch > img {
+  cursor: pointer;
+  font-size: 14px;
+}
