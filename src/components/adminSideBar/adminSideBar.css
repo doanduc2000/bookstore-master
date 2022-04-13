@@ -1,0 +1,52 @@
+.adminSideBar {
+  width: 300px;
+  height: 100vh;
+  background-color: #03a9f4;
+  position: relative;
+}
+.adminSideBar__logo {
+  padding: 10px;
+}
+.adminSideBar__logo > img {
+  display: block;
+  width: 100%;
+}
+.adminSidebar__main {
+  margin: 20px 0;
+}
+.adminSidebar__item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.adminSidebar__item > img {
+  @apply w-6 h-6;
+}
+.adminSidebar__item > span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 10px;
+}
+.adminSidebar__bottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+.adminSidebar__user {
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+}
+.adminSidebar__user > img {
+  @apply w-6 h-6;
+  cursor: pointer;
+}

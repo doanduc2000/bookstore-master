@@ -1,0 +1,15 @@
+.dashboard__title {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.dashboard__card-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.dashboard__card {
+  display: flex;
+  gap: 20px;
+}

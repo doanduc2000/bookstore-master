@@ -6,6 +6,11 @@ import Checkout from '../pages/checkout';
 import Cart from '../pages/cart';
 import Login from '../pages/auth/login';
 import Register from '../pages/auth/register';
+import AdminProduct from '../pages/adminProduct';
+import Dashboard from '../pages/dashboard';
+import homeIcon from '../assets/icons/home.svg';
+import bookIcon from '../assets/icons/book.svg';
+
 export const landingRoute = [
   {
     name: 'Trang chủ',
@@ -59,5 +64,22 @@ export const authRoute = [
     exact: true,
     component: <Register />,
   },
-  {},
+];
+export const adminRoute = [
+  {
+    name: 'Trang chủ',
+    layout: '/admin',
+    path: '/dashboard',
+    exact: true,
+    icon: homeIcon,
+    component: <Dashboard />,
+  },
+  {
+    name: 'Sản phẩm',
+    layout: '/admin',
+    path: '/product',
+    exact: true,
+    icon: bookIcon,
+    component: <AdminProduct />,
+  },
 ];
