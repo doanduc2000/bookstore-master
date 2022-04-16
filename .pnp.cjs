@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:9.5.0"],\
             ["@testing-library/user-event", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:7.2.1"],\
             ["autoprefixer", "npm:9.8.8"],\
+            ["axios", "npm:0.26.1"],\
             ["babel-eslint", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:10.1.0"],\
             ["connected-react-router", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:6.9.2"],\
             ["history", "npm:4.10.1"],\
@@ -5577,6 +5578,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["axios", [\
+        ["npm:0.26.1", {\
+          "packageLocation": "./.yarn/cache/axios-npm-0.26.1-a6641ce4e3-d9eb58ff4b.zip/node_modules/axios/",\
+          "packageDependencies": [\
+            ["axios", "npm:0.26.1"],\
+            ["follow-redirects", "virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["axobject-query", [\
         ["npm:2.2.0", {\
           "packageLocation": "./.yarn/cache/axobject-query-npm-2.2.0-6553738f52-96b8c7d807.zip/node_modules/axobject-query/",\
@@ -6036,6 +6047,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:9.5.0"],\
             ["@testing-library/user-event", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:7.2.1"],\
             ["autoprefixer", "npm:9.8.8"],\
+            ["axios", "npm:0.26.1"],\
             ["babel-eslint", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:10.1.0"],\
             ["connected-react-router", "virtual:fc265cb225253ea829d5a6c4f7ac7c315bf81ee1fbe3cdd527370506c0b6ab3573d8ae03e1f29530a3508372fd789ed567534a0e68351b8360dc56ee5aba8860#npm:6.9.2"],\
             ["history", "npm:4.10.1"],\
@@ -9037,10 +9049,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.14.9", {\
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-0b008d299e/0/cache/follow-redirects-npm-1.14.9-522f191631-f5982e0eb4.zip/node_modules/follow-redirects/",\
+        ["virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-2db68225c5/0/cache/follow-redirects-npm-1.14.9-522f191631-f5982e0eb4.zip/node_modules/follow-redirects/",\
           "packageDependencies": [\
-            ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.14.9"],\
+            ["follow-redirects", "virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9"],\
             ["@types/debug", null],\
             ["debug", null]\
           ],\
@@ -9739,7 +9751,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["http-proxy", "npm:1.18.1"],\
             ["eventemitter3", "npm:4.0.7"],\
-            ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.14.9"],\
+            ["follow-redirects", "virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9"],\
             ["requires-port", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
