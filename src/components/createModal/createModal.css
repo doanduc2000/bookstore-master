@@ -1,0 +1,89 @@
+.createModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.createModal__box {
+  width: 50%;
+  background-color: #fff;
+  transform: translate(50%, 50%);
+  border: 1px solid #03a9f4;
+  border-radius: 12px;
+}
+.createModal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #03a9f4;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.createModal__body {
+  padding: 15px;
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #03a9f4;
+}
+.createModal__avatar {
+  width: 25%;
+  height: 250px;
+  position: relative;
+}
+.createModal__avatar > img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.createModal__addAvt {
+  background-color: #03a9f4;
+  position: absolute;
+  padding: 5px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+.createModal__addAvt > img {
+  width: 30px;
+  height: 30px;
+}
+.createModal__right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  gap: 10px;
+}
+.createModal__inputForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.createModal__inputForm > label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.createModal__inputForm > input {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 12px;
+}
+.createModal__footer {
+  padding: 15px;
+  text-align: center;
+}
+.createModal__footer > button {
+  padding: 5px 10px;
+  background-color: #03a9f4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}

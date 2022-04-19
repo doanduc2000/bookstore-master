@@ -14,6 +14,9 @@ import {
 
 const Product = () => {
   const dispatch = useDispatch();
+  const product = useSelector(selectProductsList);
+  console.log('product: ', product);
+
   const filter = useSelector(selectProductsFilter);
   const total = useSelector(selectProductsTotal);
   const handleChangeFilter = (newFilter) => {
