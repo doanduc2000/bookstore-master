@@ -8,7 +8,7 @@ function* fetchProductsList(action) {
     yield put(productsActions.fetchProductsSuccess(response.data.data));
   } catch (e) {
     console.log('Fetch Product data failed', e);
-    yield put(facilitiesActions.fetchProductsFailed());
+    yield put(productsActions.fetchProductsFailed());
   }
 }
 export default function* productSaga() {
