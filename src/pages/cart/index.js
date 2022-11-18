@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import CartItem from '../../components/cartItem';
 import { cartData } from '../../mockData/product';
 import './cart.css';
 
@@ -25,22 +26,13 @@ const Cart = () => {
         <div className='cart__box'>
           <div className='cart__left'>
             {cartData.map((item, idx) => (
-              <div className='cart__item' key={idx}>
-                <img src={item.image} />
-                <div className='cart__text'>
-                  <div className='cart__info'>
-                    <span className='cart__name'>{item.name}</span>
-                    <span className='cart__category'>Thương hiệu: Sách thiếu nhi</span>
-                    <span className='cart__delete'>Xóa</span>
-                  </div>
-                  <div className='cart__price'>{item.cost}đ</div>
-                  <div className='cart__number'>
-                    <button onClick={handleDecrease}>-</button>
-                    <input type='text' value={number} disabled />
-                    <button onClick={handleIncrease}>+</button>
-                  </div>
-                </div>
-              </div>
+              <CartItem
+                {...item}
+                key={idx}
+                number={number}
+                handleDecrease={handleDecrease}
+                handleIncrease={handleIncrease}
+              />
             ))}
           </div>
           <div className='cart__right'>
