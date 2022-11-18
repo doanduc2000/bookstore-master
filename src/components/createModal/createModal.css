@@ -7,11 +7,15 @@
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 .createModal__box {
-  width: 50%;
+  max-width: 800px;
+  width:90% ;
   background-color: #fff;
-  transform: translate(50%, 50%);
+
   border: 1px solid #03a9f4;
   border-radius: 12px;
 }
@@ -28,12 +32,12 @@
 .createModal__body {
   padding: 15px;
   display: flex;
+  align-items: flex-start;
   gap: 40px;
   border-bottom: 1px solid #03a9f4;
 }
 .createModal__avatar {
   width: 25%;
-  height: 250px;
   position: relative;
 }
 .createModal__avatar > img {
