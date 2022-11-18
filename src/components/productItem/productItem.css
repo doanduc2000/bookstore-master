@@ -1,5 +1,8 @@
 
-.productItem  img {
+.productItem {
+  padding: 10px;
+}
+.productItem img {
   margin: 0 auto;
   height: 212px;
 }

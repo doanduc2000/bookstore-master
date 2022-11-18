@@ -24,7 +24,7 @@ const Product = () => {
   };
   return (
     <div className='product'>
-      <div className='container' style={{ backgroundColor: '#fff' }}>
+      <div className='container'>
         <div className='product__container'>
           <SideBar />
           <div className='product__right'>
