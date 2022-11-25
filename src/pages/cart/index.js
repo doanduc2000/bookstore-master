@@ -6,33 +6,14 @@ import './cart.css';
 
 const Cart = () => {
   const history = useHistory();
-  const [number, setNumber] = useState(0);
-  const handleDecrease = (e) => {
-    if (number <= 0) {
-      setNumber(0);
-    } else {
-      setNumber(number - 1);
-    }
-    e.preventDefault();
-  };
-  const handleIncrease = (e) => {
-    setNumber(number + 1);
-    e.preventDefault();
-  };
   return (
     <div className='cart'>
       <div className='container' style={{ backgroundColor: '#fff' }}>
-        <div className='cart__title'>2 Sản phẩm</div>
+        <div className='cart__title'>{cartData.length} Sản phẩm</div>
         <div className='cart__box'>
           <div className='cart__left'>
-            {cartData.map((item, idx) => (
-              <CartItem
-                {...item}
-                key={idx}
-                number={number}
-                handleDecrease={handleDecrease}
-                handleIncrease={handleIncrease}
-              />
+            {cartData.map((item) => (
+              <CartItem {...item} key={item.id} />
             ))}
           </div>
           <div className='cart__right'>

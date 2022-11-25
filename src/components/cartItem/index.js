@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const CartItem = (props) => {
+const CartItem = ({ image, name, cost, number }) => {
+  const [numberic, setNumberic] = useState(number);
+  const handleDecrease = (e) => {
+    numberic <= 0 ? setNumberic(0) : setNumberic(numberic - 1);
+    e.preventDefault();
+  };
+  const handleIncrease = (e) => {
+    setNumberic(numberic + 1);
+    e.preventDefault();
+  };
   return (
-    <div className='cart__item'>
-      <img src={props.image} />
-      <div className='cart__text'>
-        <div className='cart__info'>
-          <span className='cart__name'>{''}</span>
-          <span className='cart__category'>Thương hiệu: Sách thiếu nhi</span>
-          <span className='cart__delete'>Xóa</span>
-        </div>
-        <div className='cart__price'>{''}đ</div>
-        <div className='cart__number'>
-          <button onClick={''}>-</button>
-          <input type='text' value={''} disabled />
-          <button onClick={''}>+</button>
+    numberic !== 0 && (
+      <div className='cart__item'>
+        <img src={image} />
+        <div className='cart__text'>
+          <div className='cart__info'>
+            <span className='cart__name'>{name}</span>
+            <span className='cart__category'>Thương hiệu: Sách thiếu nhi</span>
+            <span className='cart__delete'>Xóa</span>
+          </div>
+          <div className='cart__price'>{cost * numberic}đ</div>
+          <div className='cart__number'>
+            <button onClick={handleDecrease}>-</button>
+            <input type='text' value={numberic} disabled />
+            <button onClick={handleIncrease}>+</button>
+          </div>
         </div>
       </div>
-    </div>
+    )
   );
 };
 
