@@ -5,10 +5,12 @@ import createSagaMiddleware from 'redux-saga';
 import { history } from '../utils/history';
 import rootSaga from './rootSaga';
 import productsReducer from '../features/product/productSlice';
+import { cartsReducer } from '../features/cart/cartSlice';
 
 const rootReducer = combineReducers({
   router: connectRouter(history),
   products: productsReducer,
+  carts: cartsReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

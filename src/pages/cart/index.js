@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import CartItem from '../../components/cartItem';
-import { cartData } from '../../mockData/product';
+import { cartListSelector } from '../../features/cart/cartSlice';
+import { formatNumber } from '../../utils/help';
 import './cart.css';
 
 const Cart = () => {
   const history = useHistory();
+  const cartData = useSelector(cartListSelector);
+  let sum = 0;
+  cartData.forEach((e) => {
+    sum += e.number * e.cost;
+  });
   return (
     <div className='cart'>
       <div className='container' style={{ backgroundColor: '#fff' }}>
@@ -19,7 +26,7 @@ const Cart = () => {
           <div className='cart__right'>
             <div className='cart__total'>
               <span className='cart__text'>Thành tiền</span>
-              <span className='cart__money'>300000đ</span>
+              <span className='cart__money'>{formatNumber(sum)}đ</span>
             </div>
             <div className='cart__btn'>
               <button

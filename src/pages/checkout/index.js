@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import CheckoutItem from '../../components/checkoutItem';
-import { checkoutData } from '../../mockData/product';
+import { cartListSelector } from '../../features/cart/cartSlice';
+import { formatNumber } from '../../utils/help';
 import './checkout.css';
 
 const Checkout = () => {
   let provisional = 0;
   let transportFee = 20;
+  const cartData = useSelector(cartListSelector);
+
   return (
     <div className='checkout'>
       <div className='container'>
@@ -30,28 +36,28 @@ const Checkout = () => {
             </div>
             <div className='checkout__right-content'>
               <div className='checkout__product'>
-                {checkoutData.map((item, idx) => {
-                  provisional += item.cost * item.total;
+                {cartData.map((item, idx) => {
+                  provisional += item.cost * item.number;
                   return <CheckoutItem key={idx} {...item} />;
                 })}
               </div>
               <div className='checkout__price'>
                 <div className='checkout__cost'>
                   <span>Tạm tính</span>
-                  <span>{provisional}đ</span>
+                  <span>{formatNumber(provisional)}đ</span>
                 </div>
                 <div className='checkout__cost'>
                   <span>Phí vận chuyển</span>
-                  <span>{transportFee}đ</span>
+                  <span>{formatNumber(transportFee)}đ</span>
                 </div>
               </div>
               <div className='checkout__total'>
                 <div className='checkout__cost'>
                   <span className='checkout__total-title'>Tổng cộng</span>
-                  <span className='checkout__total-desc'>{provisional + transportFee}đ</span>
+                  <span className='checkout__total-desc'>{formatNumber(provisional + transportFee)}đ</span>
                 </div>
                 <div className='checkout__action'>
-                  <span> {'<'} Quay về giỏ hàng</span>
+                  <Link to={'/cart'}> {'<'} Quay về giỏ hàng</Link>
                   <button>Đặt hàng</button>
                 </div>
               </div>

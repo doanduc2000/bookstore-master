@@ -75,7 +75,7 @@
   align-items: center;
   margin: 10px 0;
 }
-.checkout__action > span {
+.checkout__action > a {
   color: #ef3f3f;
   cursor: pointer;
 }

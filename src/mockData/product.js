@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 export const branch = [
   {
     id: 1,
@@ -415,25 +416,28 @@ export const checkoutData = [
 ];
 export const cartData = [
   {
-    id: 1,
+    id: uuidv4(),
     name: 'Chú thuật hồi chiến Tập 1',
     number: 1,
     cost: 30000,
+
     image: '//bizweb.dktcdn.net/thumb/large/100/386/441/products/a11e689e83684c361579.jpg?v=1647690446000',
   },
   {
-    id: 2,
+    id: uuidv4(),
     name: 'Harry Potter and the Deathly Hallows (Paperback)',
     cost: 252000,
     number: 1,
+
     image:
       '//bizweb.dktcdn.net/thumb/large/100/386/441/products/harry-potter-and-the-deathly-hallows-paper-back-1.jpg?v=1636080026000',
   },
   {
-    id: 3,
+    id: uuidv4(),
     name: 'Harry Potter and the Deathly Hallows (Paperback)',
     number: 1,
     cost: 252000,
+
     image:
       '//bizweb.dktcdn.net/thumb/large/100/386/441/products/harry-potter-and-the-deathly-hallows-paper-back-1.jpg?v=1636080026000',
   },
