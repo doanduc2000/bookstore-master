@@ -30,7 +30,7 @@ const Info = () => {
           </span>
           <div className='info__branch-box'>
             {branch.map((item, idx) => (
-              <div className='info__branch-item'>
+              <div className='info__branch-item' key={idx}>
                 <span className='info__branch-address'>
                   <img src={rightArrow} alt='' className='w-5 h-5' />
                   <p>

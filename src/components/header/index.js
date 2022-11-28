@@ -6,11 +6,15 @@ import userIcon from '../../assets/icons/user.svg';
 import cartIcon from '../../assets/icons/cart.svg';
 
 import './header.css';
+import { useSelector } from 'react-redux';
+import { cartListSelector } from '../../features/cart/cartSlice';
 
 const Header = () => {
   const history = useHistory();
   const location = useLocation();
   const [dropdown, setDropdown] = useState(false);
+  const cart = useSelector(cartListSelector);
+  const cartNumber = cart.length;
   const openDropdown = (e) => {
     setDropdown(!dropdown);
     e.preventDefault();
@@ -33,6 +37,7 @@ const Header = () => {
               </div>
               <Link to='/cart'>
                 <img src={cartIcon} alt='' className='w-8 h-8' />
+                {cartNumber > 0 && <span>{cartNumber}</span>}
               </Link>
               <div className='header__user'>
                 <button onClick={openDropdown}>

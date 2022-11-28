@@ -13,6 +13,10 @@ const cartsSlice = createSlice({
       const currentCart = state.data.filter((item) => item.id !== action.payload);
       if (currentCart) state.data = currentCart;
     },
+    addCartItem: (state, action) => {
+      const currentCart = state.data.find((item) => item.id === action.payload.id);
+      if (!currentCart) state.data.push(action.payload);
+    },
   },
 });
 export default cartsSlice;

@@ -6,11 +6,13 @@ import { history } from '../utils/history';
 import rootSaga from './rootSaga';
 import productsReducer from '../features/product/productSlice';
 import { cartsReducer } from '../features/cart/cartSlice';
+import { productItemReducer } from '../features/detailProduct/detailProductSlice';
 
 const rootReducer = combineReducers({
   router: connectRouter(history),
   products: productsReducer,
   carts: cartsReducer,
+  productItem: productItemReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

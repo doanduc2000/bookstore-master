@@ -9,7 +9,6 @@ const CartItem = ({ id, image, name, cost, number }) => {
   const handleDecrease = (e) => {
     if (numberic <= 0) {
       setNumberic(0);
-      dispatch(cartsAction.removeCartItem(id));
     } else {
       setNumberic(numberic - 1);
     }
