@@ -18,6 +18,9 @@ const CartItem = ({ id, image, name, cost, number }) => {
     setNumberic(numberic + 1);
     e.preventDefault();
   };
+  const handleRemoveItem = () => {
+    dispatch(cartsAction.removeCartItem(id));
+  };
   useEffect(() => {
     dispatch(cartsAction.setNumberItem({ id: id, number: numberic }));
     if (numberic <= 0) dispatch(cartsAction.removeCartItem(id));
@@ -30,7 +33,9 @@ const CartItem = ({ id, image, name, cost, number }) => {
         <div className='cart__info'>
           <span className='cart__name'>{name}</span>
           <span className='cart__category'>Thương hiệu: Sách thiếu nhi</span>
-          <span className='cart__delete'>Xóa</span>
+          <span className='cart__delete' onClick={handleRemoveItem}>
+            Xóa
+          </span>
         </div>
         <div className='cart__price'>{formatNumber(cost * numberic)}đ</div>
         <div className='cart__number'>

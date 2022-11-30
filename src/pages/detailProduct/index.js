@@ -18,8 +18,8 @@ const DetailProduct = () => {
   const [number, setNumber] = useState(product.number);
 
   const handleDecrease = (e) => {
-    if (number <= 0) {
-      setNumber(0);
+    if (number <= 1) {
+      setNumber(1);
     } else {
       setNumber(number - 1);
     }
